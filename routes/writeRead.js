@@ -74,7 +74,7 @@ wrRoute.put('/students/:id', async (req, res, next) => {
 wrRoute.delete('/students/:id', (req, res, next) => {
     connection.execute(
       "DELETE FROM students WHERE student_id=?;",
-      [req.params.student_id]
+      [req.params.id] 
     )
     .then(() => {
       console.log('Delete successfully');
